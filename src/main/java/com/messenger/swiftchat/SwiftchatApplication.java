@@ -9,5 +9,5 @@ public class SwiftchatApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SwiftchatApplication.class, args);
 	}
-
+//	http://localhost:8080/h2-console
 }
