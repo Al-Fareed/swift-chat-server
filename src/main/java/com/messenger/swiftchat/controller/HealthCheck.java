@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWorld {
-    @GetMapping("/check")
+public class HealthCheck {
+    @GetMapping("/health")
     public String hello(){
         return "Server is up and running";
     }
