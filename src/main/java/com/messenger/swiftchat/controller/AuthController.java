@@ -11,16 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/auth")
-@RequiredArgsConstructor
 public class AuthController {
     private final Auth authService;
+
+    public AuthController(Auth authService) {
+        this.authService = authService;
+    }
 
     @PostMapping("/send-otp")
     public String sendOtp(@RequestBody SendOtpRequest req){
         return  authService.sendOTP(req);
     }
 
-    @PostMapping
+    @PostMapping("/verify-otp")
     public String verifyOtp(@RequestBody VerifyOtpRequest req){
         return authService.verifyOTP(req);
     }
