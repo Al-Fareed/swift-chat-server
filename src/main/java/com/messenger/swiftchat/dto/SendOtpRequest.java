@@ -1,7 +1,6 @@
 package com.messenger.swiftchat.dto;
 
 public class SendOtpRequest {
-
     private String email;
 
     public String getEmail() {

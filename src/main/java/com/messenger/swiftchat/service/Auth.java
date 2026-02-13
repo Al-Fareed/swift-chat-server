@@ -4,7 +4,6 @@ import com.messenger.swiftchat.dto.SendOtpRequest;
 import com.messenger.swiftchat.dto.VerifyOtpRequest;
 import com.messenger.swiftchat.model.User;
 import com.messenger.swiftchat.repo.UserRepo;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service

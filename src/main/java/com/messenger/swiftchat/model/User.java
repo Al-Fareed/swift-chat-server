@@ -17,8 +17,6 @@ public class User {
     private String otp;
     private boolean verified;
 
-    // Getters & Setters
-
     public Long getId() {
         return id;
     }

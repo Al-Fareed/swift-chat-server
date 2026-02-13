@@ -3,7 +3,6 @@ package com.messenger.swiftchat.controller;
 import com.messenger.swiftchat.dto.SendOtpRequest;
 import com.messenger.swiftchat.dto.VerifyOtpRequest;
 import com.messenger.swiftchat.service.Auth;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
