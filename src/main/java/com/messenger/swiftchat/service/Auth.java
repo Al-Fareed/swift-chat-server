@@ -40,7 +40,6 @@ public class Auth {
             throw new RuntimeException(
                     "OTP Verification failed");
         }
-
         user.setOtp(null);
         user.setVerified(true);
         userRepo.save(user);
