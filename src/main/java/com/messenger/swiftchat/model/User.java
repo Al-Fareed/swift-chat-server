@@ -16,15 +16,16 @@ public class User {
     private String name;
     private String otp;
     private boolean verified;
-    private boolean isUserLoggedIn;
+    private boolean userLoggedIn;
 
     public boolean isUserLoggedIn() {
-        return isUserLoggedIn;
+        return userLoggedIn;
     }
 
     public void setUserLoggedIn(boolean userLoggedIn) {
-        isUserLoggedIn = userLoggedIn;
+        this.userLoggedIn = userLoggedIn;
     }
+
 
     public Long getId() {
         return id;

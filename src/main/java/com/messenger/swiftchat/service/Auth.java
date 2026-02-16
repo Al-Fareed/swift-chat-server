@@ -48,8 +48,8 @@ public class Auth {
         return "OTP Verified Successfully";
     }
 
-    public String logoutUser(String id){
-        User user = userRepo.findById(id);
+    public String logoutUser(Long id){
+        User user = userRepo.findById(id).orElseThrow(() -> new RuntimeException("No user was found logout"));
         user.setUserLoggedIn(false);
         userRepo.save(user);
         return "User logged out successfully";

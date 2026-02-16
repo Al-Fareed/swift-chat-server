@@ -25,7 +25,7 @@ public class AuthController {
     }
 
     @GetMapping("/logout/{id}")
-    public String userLogout(@PathVariable String id){
+    public String userLogout(@PathVariable Long id){
         return authService.logoutUser(id);
     }
 }
