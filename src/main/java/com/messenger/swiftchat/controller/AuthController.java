@@ -3,10 +3,7 @@ package com.messenger.swiftchat.controller;
 import com.messenger.swiftchat.dto.SendOtpRequest;
 import com.messenger.swiftchat.dto.VerifyOtpRequest;
 import com.messenger.swiftchat.service.Auth;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/auth")
@@ -25,5 +22,10 @@ public class AuthController {
     @PostMapping("/verify-otp")
     public String verifyOtp(@RequestBody VerifyOtpRequest req){
         return authService.verifyOTP(req);
+    }
+
+    @GetMapping("/logout/{id}")
+    public String userLogout(@PathVariable String id){
+        return authService.logoutUser(id);
     }
 }

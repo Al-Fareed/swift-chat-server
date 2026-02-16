@@ -16,6 +16,15 @@ public class User {
     private String name;
     private String otp;
     private boolean verified;
+    private boolean isUserLoggedIn;
+
+    public boolean isUserLoggedIn() {
+        return isUserLoggedIn;
+    }
+
+    public void setUserLoggedIn(boolean userLoggedIn) {
+        isUserLoggedIn = userLoggedIn;
+    }
 
     public Long getId() {
         return id;

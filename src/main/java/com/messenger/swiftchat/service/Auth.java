@@ -6,6 +6,8 @@ import com.messenger.swiftchat.model.User;
 import com.messenger.swiftchat.repo.UserRepo;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class Auth {
     private final UserRepo userRepo;
@@ -41,7 +43,15 @@ public class Auth {
         }
         user.setOtp(null);
         user.setVerified(true);
+        user.setUserLoggedIn(true);
         userRepo.save(user);
         return "OTP Verified Successfully";
+    }
+
+    public String logoutUser(String id){
+        User user = userRepo.findById(id);
+        user.setUserLoggedIn(false);
+        userRepo.save(user);
+        return "User logged out successfully";
     }
 }

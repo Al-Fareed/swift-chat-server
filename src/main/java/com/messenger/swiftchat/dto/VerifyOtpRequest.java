@@ -4,6 +4,15 @@ public class VerifyOtpRequest {
 
     private String email;
     private String otp;
+    private boolean userLoggedIn;
+
+    public boolean isUserLoggedIn() {
+        return userLoggedIn;
+    }
+
+    public void setUserLoggedIn(boolean userLoggedIn) {
+        this.userLoggedIn = userLoggedIn;
+    }
 
     public String getEmail() {
         return email;
